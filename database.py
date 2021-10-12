@@ -24,7 +24,7 @@ def get_profile(objectid):
                                               {'$lookup':{'from':"Contact",'localField':"_id",'foreignField':"_id",'as':"contact"}},
                                               {'$lookup':{'from':"Status",'localField':"_id",'foreignField':"_id",'as':"status"}}]):
         result = JSONEncoder().encode(data)
-        return Response(result,mimetype='application/json')
+        return Response(result,mimetype='application/json') ###  Yapıldı
     
 ### Client uygulama üzerinde profiline gitmek istediği zaman bu fonksiyon çalışır. Geri dönüş olarak Client'ın profilde ihtiyacı olan veriler döner.
 def onclick_profile(objectid):

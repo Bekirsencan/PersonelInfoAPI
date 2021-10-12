@@ -1,3 +1,5 @@
+
+from users import Users
 import json ### json format için gerekli olan kütüphane
 from bson import ObjectId ### objectid için gerekli olan kütüphane
 
@@ -8,3 +10,10 @@ class JSONEncoder(json.JSONEncoder):
         if isinstance(o, ObjectId):
             return str(o)
         return json.JSONEncoder.default(self, o)
+
+
+a = Users()
+a.username
+
+
+
